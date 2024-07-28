@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy,Terms and Policies Summarizer",
+  "version": "1.0",
+  "description": "Summarizes Terms of Service, Privacy Policy, and Cookie Usage information for websites.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon48.png"
+  }
+}
